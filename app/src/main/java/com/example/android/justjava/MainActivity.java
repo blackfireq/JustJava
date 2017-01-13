@@ -9,7 +9,7 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
     int quantity = 0;
-    int price = 5;
+    int pricePerCup = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,24 +21,23 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int totalPrice = quantity * price;
-        String priceMessage = "Total: $" + totalPrice + "\nThank you!";
+        String priceMessage = createOrderSummary();
         displayMessage(priceMessage);
     }
 
     /**
      * This method displays the given quantity value on the screen.
      */
-    private void display(int number) {
+    private void displayQuantity(int numberOfCoffees) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText("" + numberOfCoffees);
     }
 
     /**
      * This method displays the given price on the screen.
      */
     private void displayPrice(int number) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        TextView priceTextView = (TextView) findViewById(R.id.orderSummary_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
 
@@ -46,17 +45,29 @@ public class MainActivity extends AppCompatActivity {
      * This method displays the given text on the screen.
      */
     private void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
+        TextView orderSummaryTextView = (TextView) findViewById(R.id.orderSummary_text_view);
+        orderSummaryTextView.setText(message);
     }
 
     public void increment(View view) {
         quantity++;
-        display(quantity);
+        displayQuantity(quantity);
     }
 
     public void decrement(View view) {
         quantity--;
-        display(quantity);
+        displayQuantity(quantity);
     }
+
+    private int calculatePrice() {
+        return quantity * pricePerCup;
+    }
+
+    private String createOrderSummary() {
+        int totalPrice = calculatePrice();
+        return "Name: John Doe \nQuantity: " + quantity +
+                "\nTotal: $" + totalPrice + "\nThank you!";
+    }
+
+
 }

@@ -11,21 +11,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Quantity"
+        android:text="@string/quantity_label"
         android:textAllCaps="true"
-        android:textSize="@dimen/text_medium"/>
+        android:textSize="@dimen/text_medium" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="16dp">
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal">
+
         <Button
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="decrement"
             android:text="-"
 
-            android:textSize="@dimen/text_small"/>
+            android:textSize="@dimen/text_small" />
+
         <TextView
             android:id="@+id/quantity_text_view"
             android:layout_width="wrap_content"
@@ -34,30 +37,34 @@
             android:layout_marginRight="8dp"
             android:text="0"
             android:textColor="#000"
-            android:textSize="@dimen/text_small"/>
+            android:textSize="@dimen/text_small" />
+
         <Button
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="increment"
             android:text="+"
-            android:textSize="@dimen/text_small"/>
+            android:textSize="@dimen/text_small" />
     </LinearLayout>
+
     <TextView
         android:id="@+id/quantity_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Price"
+        android:text="@string/order_label"
         android:textAllCaps="true"
-        android:textSize="@dimen/text_medium"/>
+        android:textSize="@dimen/text_medium" />
+
     <TextView
-        android:id="@+id/price_text_view"
+        android:id="@+id/orderSummary_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="$0"
         android:textColor="#000"
-        android:textSize="@dimen/text_small"/>
+        android:textSize="@dimen/text_small" />
+
     <Button
         android:id="@+id/order_button"
         android:layout_width="wrap_content"
@@ -65,5 +72,5 @@
         android:layout_margin="16dp"
         android:onClick="submitOrder"
         android:text="ORDER"
-        android:textSize="@dimen/text_small"/>
+        android:textSize="@dimen/text_small" />
 </LinearLayout>
