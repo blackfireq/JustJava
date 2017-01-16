@@ -2,10 +2,14 @@ package com.example.android.justjava;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
+
+import static android.R.attr.order;
 
 public class MainActivity extends AppCompatActivity {
     int quantity = 0;
@@ -65,8 +69,15 @@ public class MainActivity extends AppCompatActivity {
 
     private String createOrderSummary() {
         int totalPrice = calculatePrice();
-        return "Name: John Doe \nQuantity: " + quantity +
-                "\nTotal: $" + totalPrice + "\nThank you!";
+        CheckBox hasWhippedCream = (CheckBox) findViewById(R.id.whipped_cream);
+        String orderSummary = "";
+        orderSummary += "Name: John Doe";
+        orderSummary += "\nAdd whipped cream?" + hasWhippedCream.isChecked();
+        orderSummary += "\nQuantity: " + quantity;
+        orderSummary += "\nTotal: $" + totalPrice;
+        orderSummary += "\nThank you!";
+        return orderSummary;
+
     }
 
 
