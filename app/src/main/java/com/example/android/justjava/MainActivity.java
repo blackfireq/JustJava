@@ -86,13 +86,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void createOrderSummary(String name, int price, boolean AddWhippedCream, boolean AddChocolate) {
         String orderSummary = "";
-        orderSummary += "Add whipped cream? " + AddWhippedCream;
-        orderSummary += "\nAdd chocolate? " + AddChocolate;
-        orderSummary += "\nQuantity: " + quantity;
-        orderSummary += "\nTotal: $" + price;
-        orderSummary += "\nThank you!";
-        String subject = "JustJava order for " + name;
-        composeEmail(subject,orderSummary);
+        orderSummary += getString(R.string.orderSummaryName, name);
+        orderSummary += "\n" + getString(R.string.orderSummaryWhippedCream) + " " + AddWhippedCream;
+        orderSummary += "\n" + getString(R.string.orderSummaryChocolate) + " " + AddChocolate;
+        orderSummary += "\n" + getString(R.string.orderSummaryQuantity) + " " + quantity;
+        orderSummary += "\n" + getString(R.string.orderSummaryPrice) + ": $" + price;
+        orderSummary += "\n" + getString(R.string.orderSummaryThankYou);
+        String subject = getString(R.string.orderSummaryJustJavaOrder) + " " + name;
+        composeEmail(subject, orderSummary);
 
 
     }
@@ -101,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
         intent.putExtra(Intent.EXTRA_SUBJECT, subject);
-        intent.putExtra(Intent.EXTRA_TEXT,orderSummary);
+        intent.putExtra(Intent.EXTRA_TEXT, orderSummary);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }

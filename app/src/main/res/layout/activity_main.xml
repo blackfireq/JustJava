@@ -90,30 +90,13 @@
                     android:textSize="@dimen/text_small" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/quantity_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/order_label"
-                android:textAllCaps="true" />
-
-            <TextView
-                android:id="@+id/orderSummary_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="$0"
-                android:textColor="#000"
-                android:textSize="@dimen/text_small" />
-
             <Button
                 android:id="@+id/order_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:onClick="submitOrder"
-                android:text="ORDER"
+                android:text="@string/orderButton"
                 android:textSize="@dimen/text_small" />
         </LinearLayout>
     </ScrollView>
