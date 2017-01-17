@@ -29,35 +29,22 @@
                 android:inputType="textCapWords" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="@string/toppings"
-                android:textAllCaps="true" />
+                style="@style/header"
+                android:text="@string/toppings" />
 
             <CheckBox
                 android:id="@+id/whipped_cream"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="24dp"
-                android:text="@string/whippedCream"
-                android:textSize="16sp" />
+                style="@style/toppings"
+                android:text="@string/whippedCream" />
 
             <CheckBox
                 android:id="@+id/chocolate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="24dp"
-                android:text="@string/chocolate"
-                android:textSize="16sp" />
+                style="@style/toppings"
+                android:text="@string/chocolate" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/quantity_label"
-                android:textAllCaps="true" />
+                style="@style/header"
+                android:text="@string/quantity_label" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -65,8 +52,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    style="@style/Button"
                     android:onClick="decrement"
                     android:text="@string/decrement"
 
@@ -83,11 +69,9 @@
                     android:textSize="@dimen/text_small" />
 
                 <Button
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    style="@style/Button"
                     android:onClick="increment"
-                    android:text="@string/increment"
-                    android:textSize="@dimen/text_small" />
+                    android:text="@string/increment" />
             </LinearLayout>
 
             <Button
