@@ -2,4 +2,11 @@
     <string name="app_name">Just Java</string>
     <string name="quantity_label">Quantity</string>
     <string name="order_label">Order Summary</string>
+    <string name="customerName">Enter Name</string>
+    <string name="toppings">Toppings</string>
+    <string name="whippedCream">Whipped Cream</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="decrement">-</string>
+    <string name="increment">+</string>
+    <string name="quantityText">0</string>
 </resources>

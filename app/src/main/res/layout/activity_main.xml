@@ -21,18 +21,18 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/name"
+                android:id="@+id/customerName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="Enter name here"
+                android:hint="@string/customerName"
                 android:inputType="textCapWords" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:text="Toppings"
+                android:text="@string/toppings"
                 android:textAllCaps="true" />
 
             <CheckBox
@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="24dp"
-                android:text="Whipped Cream"
+                android:text="@string/whippedCream"
                 android:textSize="16sp" />
 
             <CheckBox
@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="24dp"
-                android:text="Chocolate"
+                android:text="@string/chocolate"
                 android:textSize="16sp" />
 
             <TextView
@@ -68,7 +68,7 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:onClick="decrement"
-                    android:text="-"
+                    android:text="@string/decrement"
 
                     android:textSize="@dimen/text_small" />
 
@@ -78,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="0"
+                    android:text="@string/quantityText"
                     android:textColor="#000"
                     android:textSize="@dimen/text_small" />
 
@@ -86,7 +86,7 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:onClick="increment"
-                    android:text="+"
+                    android:text="@string/increment"
                     android:textSize="@dimen/text_small" />
             </LinearLayout>
 
